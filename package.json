@@ -1,0 +1,73 @@
+{
+  "name": "dsh-opencode-go-quota",
+  "version": "0.2.0",
+  "description": "OpenCode Go remaining-quota pill and detail panel for the DeepSeek Harness composer status row",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "dsh",
+    "opencode",
+    "opencode-go",
+    "quota",
+    "status-bar",
+    "cordis"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "INSTALL.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5 || ~4.1.0",
+    "@deepseek-ai/dsh-credentials": ">=0.2.1-rc.5",
+    "@deepseek-ai/dsh-launch-environment": ">=0.2.1-rc.5",
+    "@deepseek-ai/dsh-typert-protocol": ">=0.2.1-rc.5"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-credentials": {
+      "optional": false
+    }
+  },
+  "author": "dsh-opencode-go-quota contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6520874/dsh-opencode-go-quota.git"
+  },
+  "homepage": "https://github.com/6520874/dsh-opencode-go-quota#readme",
+  "bugs": {
+    "url": "https://github.com/6520874/dsh-opencode-go-quota/issues"
+  }
+}

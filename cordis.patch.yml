@@ -1,0 +1,11 @@
+# Bundle layer for dsh-opencode-go-quota.
+# Optional config (all fields have defaults):
+#   - id: opencode-go-quota
+#     name: dsh-opencode-go-quota
+#     config:
+#       baseURL: https://opencode.ai/inference/go/v1
+#       apiKeyEnv: OPENCODE_GO_API_KEY
+#       refreshMs: 15000
+- insert:
+    - id: opencode-go-quota
+      name: dsh-opencode-go-quota
